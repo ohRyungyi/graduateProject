@@ -1,0 +1,163 @@
+14개 class -> 10개 class로 줄였을 때의 변화
+각 class별 test 이미지로 인식한 결과 해당 식재료를 무엇으로 인식하는지 나타내는 텍스트파일.
+
+cabbage
+1. [] -> []
+2. [onion] -> [cabbage]
+3. [] -> [cabbage]
+4. [onion] -> [cabbage]
+5. [] -> [cabbage]
+6. [cabbage] ->[]
+7. [] -> [cabbage, meat]
+8. [cabbage] -> [cabbage]
+9. [radish] -> []
+10. [onion] -> []
+
+carrot
+1. [carrot] -> [carrot]
+2. [carrot] -> []
+3. [carrot] -> [carrot]
+4. [carrot] -> [carrot]
+5. [carrot] -> [carrot]
+6. [carrot] -> [carrot]
+7. [] -> []
+8. [carrot] -> [carrot]
+9. [carrot] -> [carrot]
+10. [] -> []
+
+cucumber
+1. [cucumber] -> [cucumber]
+2. [cucumber] -> [cucumber]
+3. [carrot, cucumber] -> [carrot, cucumber]
+4. [cucumber] -> [cucumber]
+5. [cucumber] -> [cucumber]
+6. [cucumber] -> [cucumber]
+7. [cucumber] -> []
+8. [cucumber] -> [cucumber]
+9. [mushroom] -> []
+10. [cucumber] -> [cucumber]
+
+garlic
+1. [carrot] -> [garlic]
+2. [carrot, potato] -> [garlic]
+3. [onion] -> [garlic]
+4. [] -> [garlic]
+5. [] -> [garlic]
+6. [] -> [garlic]
+7. [potato] -> [garlic]
+8. [carrot] -> [garlic]
+9. [potato] -> [garlic]
+10. [carrot, potato] -> [garlic]
+
+meat
+1. [meat] -> []
+2. [] -> []
+3. [] -> [meat]
+4. [] -> [meat]
+5. [] -> []
+6. [] -> [meat]
+7. [] -> []
+8. [] -> [meat]
+9. [] -> []
+10. [] -> []
+
+mushroom
+1. [mushroom] -> [mushroom]
+2. [mushroom] -> [mushroom]
+3. [mushroom] -> [mushroom]
+4. [] -> []
+5. [] -> []
+6. [mushroom] -> [mushroom]
+7. [] -> []
+8. [] -> []
+9. [mushroom] -> [mushroom]
+10. [mushroom] -> [mushroom]
+
+piment
+1. [piment] -> [piment]
+2. [piment] -> [piment]
+3. [piment] -> [piment]
+4. [onion] -> [piment]
+5. [piment] -> [piment]
+6. [] -> []
+7. [piment] -> [piment]
+8. [] -> []
+9. [piment] -> [piment]
+10. [] -> []
+
+potato
+1. [] -> [potato]
+2. [onion] -> [potato]
+3. [carrot, potato] -> [potato]
+4. [carrot] -> [potato]
+5. [carrot] -> [potato]
+6. [] -> [potato]
+7. [] -> [potato]
+8. [] -> [potato]
+9. [] -> [potato]
+10. [] -> [potato]
+
+radish
+1. [cucumber] -> [cucumber]
+2. [] -> []
+3. [] -> []
+4. [onion] -> []
+5. [radish] -> []
+6. [radish] -> [radish]
+7. [] -> []
+8. [radish] -> [potato]
+9. [] -> []
+10. [] -> [potato]
+
+leek
+1. [] -> []
+2. [] -> [leek]
+3. [] -> []
+4. [] -> []
+5. [potato] -> []
+6. [] -> [leek]
+7. [potato] -> []
+8. [] -> []
+9. [potato] -> []
+10. [] -> [leek]
+
+인식률
+cabbage
+2/10 -> 6/10
+
+carrot
+8/10 -> 7/10
+
+cucumber
+9/10 -> 8/10
+
+garlic
+0/10 -> 10/10
+
+meat
+1/10 -> 4/10
+
+mushroom
+6/10 -> 6/10
+
+piment
+6/10 -> 7/10
+
+potato
+0/10 -> 10/10
+
+radish
+3/10 -> 1/10
+
+leek
+0/10 -> 3/10
+
+전체
+35/90 -> 59/90
+35/100 -> 62/100
+상승한 클래스
+6
+하락한 클래스
+3
+그대로인 클래스
+1
