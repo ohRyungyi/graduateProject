@@ -2,6 +2,7 @@
 import pymysql.cursors
 import json
 import os
+from yolo import labels_kor
 
 conn = pymysql.connect( 
 host = "foodrecommender9.c6v4d5m6amga.ap-northeast-2.rds.amazonaws.com", #ex) '127.0.0.1' 
@@ -13,7 +14,7 @@ database = "sys"
 
 curs = conn.cursor()
 
-path = ".\Recipes_file"
+path = "./Recipes_file"
 file_list = os.listdir(path)
 
 
@@ -25,7 +26,7 @@ def ingredient_search():
     recipes_info1 = []    #식재료 기반으로 찾은 레시피 목록
     necessary_ingre = []  #추가로 필요한 재료 목록
 
-    ingre_list = ["양파", "당근", "버섯"]  #선택한 식재료 리스트
+    ingre_list = labels_kor  #선택한 식재료 리스트
 
     sql1 = "select recipe_ingre,id from RecipeData order by recipe_name;"
     curs.execute(sql1)
@@ -61,7 +62,7 @@ def ingredient_search():
             rrr_id = recipe_idd[0]
             rrr_id_int = int(rrr_id[0])
             rrr_id_str = str(rrr_id_int)
-            with open(path + '\\' + rrr_id_str + '.json', 'r', encoding='utf-8') as json_file:
+            with open(path + '/' + rrr_id_str + '.json', 'r', encoding='utf-8') as json_file:
                 json_data = json.load(json_file)
                 recipe_order_count1 = json_data["recipe"]
 
@@ -214,7 +215,7 @@ def recommend_recipe():
             else:
                 break
 
-    with open(path + '\\' + rec_id_str + '.json', 'r', encoding='utf-8') as json_file:
+    with open(path + '/' + rec_id_str + '.json', 'r', encoding='utf-8') as json_file:
         json_data = json.load(json_file)
         recipe_order = json_data["recipe"]
         page = 0
